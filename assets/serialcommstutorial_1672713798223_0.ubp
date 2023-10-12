@@ -1,0 +1,242 @@
+module main
+author unknown
+version 1 0 
+description ''
+variables bits timer char pinVal bitsList num TF stopGraph BAUD DELAY TXpin RXpin GRpin 
+
+	spec 'r' 'TF2INT' 'TF2INT _' 'bool' true
+	spec 'r' 'bin2dec' 'TF2dec _' 'auto' ''
+	spec 'r' 'dec2bin' 'dec2TF _' 'auto' '10'
+
+to TF2INT TF {
+  if TF {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+to bin2dec bitsList {
+  comment 'LSB -> MSB
+List contains T/F'
+  if (8 != (size bitsList)) {
+    sayIt 'Input length has to be 8 bits.'
+    stopTask
+  }
+  local 'output' 0
+  output += ((TF2INT (at 1 bitsList)) << 0)
+  output += ((TF2INT (at 2 bitsList)) << 1)
+  output += ((TF2INT (at 3 bitsList)) << 2)
+  output += ((TF2INT (at 4 bitsList)) << 3)
+  output += ((TF2INT (at 5 bitsList)) << 4)
+  output += ((TF2INT (at 6 bitsList)) << 5)
+  output += ((TF2INT (at 7 bitsList)) << 6)
+  output += ((TF2INT (at 8 bitsList)) << 7)
+  return output
+}
+
+to dec2bin num {
+  comment 'LSB -> MSB
+List contains T/F'
+  local 'TFList' ('[data:makeList]')
+  local 'input' num
+  local 'output' ('[data:makeList]')
+  repeatUntil (input == 0) {
+    '[data:addLast]' (1 == (input % 2)) TFList
+    input = (input / 2)
+  }
+  repeatUntil ((size TFList) == 8) {
+    '[data:addLast]' (booleanConstant false) TFList
+  }
+  return TFList
+}
+
+script 71 50 {
+comment 'COMM/SERIAL UART Library Blocks versus PROGRAMMED SERIAL Code Comparison
+
+For use on various hardware platforms, please refer to the specific PIN INFO in our WIKI:
+https://wiki.microblocks.fun/special_pins
+
+A random character from A-Z will be transmitted from TX Pin #1 to RX Pin# 0.
+Graphing copies RXpin to the GRpin and uses it to graph the signal.
+
+CONNECTIONS for micro:bit v2:
+- Alligator cable from Pin# 0 to Pin# 1
+
+- Set BAUD rate under START (20,40,110,330,1200,2400)
+  Note: Programmed SERIAL max speed is about 2400 baud due to simplicity of the code provided here.
+            Higher baud rates are possible for Serial UART BUT-A test: 4800,9600,19200,28800,57600,115200
+
+- Press RESET on micro:bit
+
+- Press BUT-A for Comm/Serial UART Library Blocks version
+
+- Press BUT-B for PROGRAMMED SERIAL version
+
+If you wish to see a graph of the bits transmitted:
+
+- Open a GRAPH window and set ZERO at bottom
+- Set Serial Delay to 1
+- Set a BAUD RATE 20 or 40'
+}
+
+script 69 632 {
+whenStarted
+BAUD = 20
+DELAY = (1000000 / BAUD)
+GRpin = 2
+TXpin = 1
+RXpin = 0
+comment 'Select a random character (A-Z) and convert it to bits '
+char = ('[data:unicodeString]' (random 65 90))
+bitsList = (dec2bin ('[data:unicodeAt]' 1 char))
+digitalWriteOp TXpin true
+'[display:mbDisplayOff]'
+'[display:mbDisplay]' 2269696
+repeatUntil stopGraph {
+  printIt (digitalReadOp 3)
+}
+}
+
+script 496 636 {
+whenStarted
+forever {
+  digitalWriteOp GRpin (digitalReadOp RXpin)
+}
+}
+
+script 478 1374 {
+whenButtonPressed 'A'
+comment 'COMM/SERIAL Blocks Receive'
+waitMillis 2000
+'[display:mbDisplay]' 15237440
+waitMillis 1000
+pinVal = ('[data:unicodeString]' (at 1 ('[serial:read]')))
+displayCharacter pinVal
+stopGraph = (booleanConstant true)
+comment 'Convert character to bits'
+bits = ('[data:makeList]')
+for TF (dec2bin ('[data:unicodeAt]' 1 pinVal)) {
+  '[data:addLast]' (TF2INT TF) bits
+}
+bits = ('[data:joinStrings]' bits '-')
+sayIt 'Received:' pinVal '(' ('[data:unicodeAt]' 1 pinVal) ')' ('[data:unicodeString]' 10) 'LSB->MSB:' ('[data:unicodeString]' 10) ('[data:copyFromTo]' bits 1)
+}
+
+script 78 1375 {
+comment 'SERIAL Library UART Send / Receive'
+}
+
+script 78 1446 {
+whenButtonPressed 'A'
+comment 'COMM/SERIAL Blocks Send'
+comment 'A: 0x41 0100 0001
+U: 0x55 0101 0101'
+stopGraph = (booleanConstant false)
+displayCharacter char
+sayIt 'Sending:' char
+waitMillis 1000
+'[serial:open]' BAUD
+'[serial:write]' char
+}
+
+script 87 2095 {
+comment 'PROGRAMMED SERIAL Send / Receive'
+}
+
+script 478 2095 {
+whenButtonPressed 'B'
+comment 'PROGRAMMED Receive on Pin# 0 '
+bits = ('[data:makeList]')
+comment 'START bit = 0'
+waitUntil ((digitalReadOp RXpin) == (booleanConstant false))
+waitMicros DELAY
+comment 'DATA bits'
+repeat 8 {
+  '[data:addLast]' (digitalReadOp RXpin) bits
+  waitMicros DELAY
+}
+waitMillis 1000
+stopGraph = (booleanConstant true)
+pinVal = ('[data:unicodeString]' (bin2dec bits))
+displayCharacter pinVal
+for bit# (size bits) {
+  atPut bit# bits (TF2INT (at bit# bits))
+}
+bits = ('[data:joinStrings]' bits '-')
+sayIt 'Received:' pinVal ('[data:unicodeString]' 10) 'LSB->MSB:' ('[data:unicodeString]' 10) ('[data:copyFromTo]' bits 1)
+}
+
+script 78 2135 {
+whenButtonPressed 'B'
+comment 'PROGRAMMED Send on Pin# 1 '
+'[display:mbDisplayOff]'
+displayCharacter char
+sayIt 'Sending:' char
+waitMillis 1000
+displayCharacter '>'
+comment 'SEND Bits Sequence 
+bitList: LSB -> MSB'
+digitalWriteOp TXpin true
+waitMicros DELAY
+comment 'START bit = 0'
+digitalWriteOp TXpin false
+waitMicros DELAY
+comment 'DATA bits'
+for bit bitsList {
+  digitalWriteOp TXpin bit
+  waitMicros DELAY
+}
+comment 'STOP bit = 1'
+digitalWriteOp TXpin true
+waitMicros DELAY
+}
+
+
+module 'LED Display' Output
+author MicroBlocks
+version 1 2 
+tags pixel matrix led tft 
+description 'Display primitives for the 5x5 LED display on the BBC micro:bit, Calliope mini and M5Atom Matrix. Boards with TFT displays (such as the Citilab ED1 or the M5Stack family) also support this primitives in a simulated "fat pixel" display.'
+variables _stop_scrolling_text 
+
+	spec ' ' '[display:mbDisplay]' 'display _' 'microbitDisplay' 15237440
+	spec ' ' '[display:mbDisplayOff]' 'clear display'
+	spec ' ' '[display:mbPlot]' 'plot x _ y _' 'num num' 3 3
+	spec ' ' '[display:mbUnplot]' 'unplot x _ y _' 'num num' 3 3
+	spec ' ' 'displayCharacter' 'display character _' 'str' 'A'
+	spec ' ' 'scroll_text' 'scroll text _ : pausing _ ms' 'str num' 'HELLO ROSA!' 100
+	spec ' ' 'stopScrollingText' 'stop scrolling'
+
+to displayCharacter s {
+  s = ('[data:join]' '' s)
+  if ((size s) == 0) {
+    '[display:mbDisplayOff]'
+    return 0
+  }
+  '[display:mbDrawShape]' ('[display:mbShapeForLetter]' (at 1 s))
+}
+
+to scroll_text text optionalDelay {
+  text = ('[data:join]' text '')
+  delay = 100
+  if ((pushArgCount) > 1) {
+    delay = optionalDelay
+  }
+  _stop_scrolling_text = (booleanConstant false)
+  local 'length' (size text)
+  for position ((length * 6) + 6) {
+    if _stop_scrolling_text {return 0}
+    for i length {
+      '[display:mbDrawShape]' ('[display:mbShapeForLetter]' ('[data:unicodeAt]' i text)) (((i * 6) + 2) - position) 1
+    }
+    waitMillis delay
+  }
+}
+
+to stopScrollingText {
+  _stop_scrolling_text = (booleanConstant true)
+  waitMillis 10
+  '[display:mbDisplayOff]'
+}
+

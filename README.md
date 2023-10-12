@@ -1,0 +1,92 @@
+  
+# 主页
+
+欢迎来到 MicroBlocks 中文wiki 页面。
+
+官方wiki 地址：[https://wiki.microblocks.fun/](https://wiki.microblocks.fun/)
+
+# 参考手册
+
+[用户手册](用户手册.md)
+
+[MicroBlocks 积木编程手册](MicroBlocks%20积木编程手册.md)
+
+[硬件驱动库](硬件驱动库.md)
+
+[库文件夹](库文件夹.md)
+
+[主板说明](主板说明.md)
+
+[示例程序](示例程序.md)
+
+# [发布的文章](https://wiki.microblocks.fun/publications)
+
+# [贡献者们](https://wiki.microblocks.fun/contributors)
+
+# 如何做
+
+[如何创建一个新的脚本库](如何创建一个新的脚本库.md)（How to create a library - by Turgut Guneysu）
+
+翻译 MicroBlocks
+
+创建活动指南
+
+# 教程
+
+[使用 UDP 的 WiFi 远程控制](使用%20UDP%20的%20WiFi%20远程控制.md)
+
+Play Ringtones
+
+[传感器与数据项目](传感器与数据项目.md) （Sensing and Data Tutorials）
+
+Dancing Robot
+
+Electronics
+
+MazeRunner Game written with MicroBlocks for Adafruit CLUE
+
+HuskyLens
+
+[串行通信是如何工作的?](串行通信是如何工作的%3F.md) (How Does Serial communications Work?)
+
+App Inventor
+
+[SNAP!](SNAP!.md)
+
+[在 MicroBlocks 中使用 I2C 协议连接 micro:bit 与 Arduino](在%20MicroBlocks%20中使用%20I2C%20协议连接%20micro%3Abit%20与%20Arduino.md)（Communicate between micro:bit and Arduino with I2C）
+
+Run the MicroBlocks VM on Raspberry Pi
+
+MicroBlocks IDE HTTP Server
+
+Older Tutorials
+
+# 硬件套装
+
+OKDO
+
+Robotistan
+
+# 主板说明
+
+[支持主板列表](支持主板列表.md)
+
+[主板特殊引脚](主板特殊引脚.md)
+
+[[ESP32 说明]]
+
+[[ESP8266 说明]]
+
+
+# 技术说明
+
+[[MicroBlocks VM 虚拟机]]
+
+[[MicroBlocks IDE 集成开发工具]]
+
+[[音调和舵机的支持]]
+
+[[接收来自 Snap! 的 HTTP]]
+
+[[GP 语法]]
+

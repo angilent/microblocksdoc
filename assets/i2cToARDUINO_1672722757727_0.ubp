@@ -1,0 +1,66 @@
+module main
+variables I2CData sendBuffer i2cDeviceNo
+
+script 50 50 {
+whenButtonPressed 'A'
+'[display:mbDisplay]' 719528
+comment 'I2C SEND: max 32 bytes in INT format'
+local 'i2cDevNo' 13
+sendBuffer = 'Hello From MicroBlocks0123456789'
+I2CData = ('[data:makeList]')
+for i (size sendBuffer) {
+  '[data:addLast]' ('[data:unicodeAt]' 1 (at i sendBuffer)) I2CData
+}
+'[sensors:i2cWrite]' i2cDevNo I2CData
+sayIt 'SENT' (size sendBuffer) 'Bytes.'
+}
+
+script 521 50 {
+whenButtonPressed 'B'
+'[display:mbDisplay]' 751304
+comment 'I2C RECV: max 32 bytes in INT format
+
+Length of the LIST defined determines incoming Byte count.'
+local 'i2cDevNo' 13
+I2CData = (newList 32)
+'[sensors:i2cRead]' i2cDevNo I2CData
+comment 'Convert incoming from INT to Characters'
+for i (size I2CData) {
+  comment 'Stop at NL character and delete the rest'
+  if ((at i I2CData) == 10) {
+    local 'delCount' ((size I2CData) - i)
+    repeat delCount {
+      '[data:delete]' 'last' I2CData
+    }
+    sayIt 'Received ' (size I2CData) ' Bytes: ' ('[data:joinStrings]' I2CData) 'Bytes deleted:' delCount
+    waitMillis 2000
+    return ''
+  } else {
+    atPut i I2CData ('[data:unicodeString]' (at i I2CData))
+  }
+}
+sayIt 'Received ' (size I2CData) ' Bytes: ' ('[data:joinStrings]' I2CData) 'Bytes deleted:' delCount
+}
+
+
+module 'Basic Sensors' Input
+
+	spec 'r' '[sensors:tiltX]' 'tilt x'
+	spec 'r' '[sensors:tiltY]' 'tilt y'
+	spec 'r' '[sensors:tiltZ]' 'tilt z'
+	spec 'r' '[sensors:acceleration]' 'acceleration'
+	spec 'r' '[display:lightLevel]' 'light level'
+	spec 'r' '[sensors:temperature]' 'temperature (°C)'
+
+module 'LED Display' Output
+
+	spec ' ' '[display:mbDisplay]' 'display _' 'microbitDisplay'
+	spec ' ' '[display:mbDisplayOff]' 'clear display'
+	spec ' ' '[display:mbPlot]' 'plot x _ y _' 'num num' 3 3
+	spec ' ' '[display:mbUnplot]' 'unplot x _ y _' 'num num' 3 3
+	spec ' ' 'displayCharacter' 'display character _' 'str' 'A'
+
+to displayCharacter s {
+  '[display:mbDrawShape]' ('[display:mbShapeForLetter]' (at 1 s))
+}
+

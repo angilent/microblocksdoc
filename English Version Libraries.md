@@ -1,0 +1,132 @@
+- AI
+  collapsed:: true
+	- AILens
+	- HuskyLens
+- ELECFREAKS
+  collapsed:: true
+	- Cutebot
+	- NeZha
+	- Octopus
+	- WuKong2040
+	- Wukong
+- Graphics and Displays
+  collapsed:: true
+	- 8 Bit Graphics
+	- BMP
+	- HSV Colors
+	- LCD Display
+	- LED Dot Matrix (d1 mini)
+	- NeoPanel
+	- OLED Graphics
+	- OLED Turtle
+	- TFT
+	- Turtle
+- Kits and Boards
+  collapsed:: true
+	- Hummingbird
+	- HyperDuino
+	- Imagina
+	- M5FireKits
+	- MakerBit
+	- MakerPort
+	- PicoBricks
+	- TdR STEAM
+	- databot
+- Network
+  collapsed:: true
+	- HTTP client
+	- HTTP server
+	- MQTT
+	- UDP
+	- WebSocket server
+	- WebThings
+	- WiFi
+- Other
+  collapsed:: true
+	- System
+		- filePrims
+		- graphicsPrims
+		- jsonPrims
+		- miscPrims
+		- oneWirePrims
+		- radioPrims
+		- sensorPrims
+		- servoPrims
+		- soundPrims
+		- touchScreenPrims
+		- varPrims
+		- wifiPrims
+	- Circuit Playground
+	- D1 Motor Shield
+	- DotStar
+	- DrawBot
+	- ED1 Buttons
+	- ED1 Stepper Motor
+	- Encoder Motor
+	- Files
+	- Fractions
+	- IR Remote
+	- Joystick_bit
+	- Keyboard and Mouse
+	- Lists
+	- SquareWave
+	- Strings
+	- dec2anyBase
+- Robots
+  collapsed:: true
+	- 3dBot
+	- Finch
+	- LEGO EV3
+	- Maqueen
+	- Micro:bit Keyestudio Robot
+	- RoboFut
+	- RobotBit
+	- Sphero-RVR
+- Sensing
+  collapsed:: true
+	- Air Pressure (LPS22HB)
+	- Barometric Pressure (BMX280)
+	- Button Events
+	- Color (TCS34725)
+	- Distance (HC-SR04)
+	- Distance (VL53L0X)
+	- Distance (VL53L1x)
+	- Distance (VL6180x)
+	- Gas (CCS811)
+	- Gas (SCD30)
+	- Gas (SGP30)
+	  id:: 5dede054-0ada-44ba-aa1a-a51bdcc35c8a
+	- Gesture (PAJ7620)
+	- IR Motion (PIR)
+	- Light & Gesture (APDS9960)
+	  id:: 22de16e4-23a8-4c1e-959d-22fbdd835ea6
+	- Light (BH1750)
+	- Microphone
+	- Motion
+	- RFID (PN532)
+	- RFID (RC522)
+	- Soil Moisture (Adafruit)
+	- Temperature Humidity (DHT11, DHT22)
+	- Temperature Humidity (DHT12)
+	- Temperature Humidity (SH30)
+	- Temperature Humidity (SHTC3)
+	  id:: 58b41068-d91c-4a12-bac2-e048559282ed
+	- Touch (MPR121)
+	- Touch (microbit)
+	- Touch Screen
+- Sound
+  collapsed:: true
+	- AMRadioTone
+	- DAC MCP4725
+	- MP3 Player (Open Smart)
+	- MP3 Player
+	- MultiTone
+	- Pluck
+	- WAV
+- Basic Sensors
+- LED Display
+- NeoPixel
+- Radio
+- Ringtone
+- Servo
+- Tone

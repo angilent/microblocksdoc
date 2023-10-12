@@ -1,0 +1,93 @@
+module main
+author unknown
+version 1 0 
+description ''
+
+	spec ' ' 'RADMsg' 'RADMsg _ ShowBuff _' 'auto auto' '' '10'
+
+to RADMsg _msg _bufYN {
+  comment 'LONG msgs get TAB added for each interim buffer.
+
+Total length with everything added has to be < 19.'
+  '[radio:setGroup]' 255
+  local '_msgOut' ''
+  local '_delay' 200
+  local 'radMSgSize' 17
+  if (isType _msg 'list') {
+    _msgOut = ('[data:joinStrings]' _msg ',')
+  } (or (isType _msg 'number') (isType _msg 'number')) {
+    _msgOut = ('[data:join]' '' _msg)
+  } (isType _msg 'string') {
+    _msgOut = _msg
+  }
+  local '_msgLen' (size _msgOut)
+  local '_buff#' (_msgLen / radMSgSize)
+  local '_rem' (_msgLen % radMSgSize)
+  if (_msgLen <= radMSgSize) {
+    '[radio:sendString]' _msgOut
+  } else {
+    for i _buff# {
+      if _bufYN {displayCharacter (_buff# - i)}
+      local '_msgPart' ('[data:copyFromTo]' _msg (((i - 1) * _radMsgSize) + 1) ((((i - 1) * _radMsgSize) + 1) + _radMsgSize))
+      '[radio:sendString]' _msgPart
+      waitMillis _delay
+    }
+  }
+  if _bufYN {
+    '[display:mbDisplayOff]'
+  }
+}
+
+script 55 57 {
+to RADMsg {}
+}
+
+
+module 'LED Display' Output
+author MicroBlocks
+version 1 0 
+tags pixel matrix led tft 
+description 'Display primitives for the 5x5 LED display on the BBC micro:bit, Calliope mini and M5Atom Matrix. Boards with TFT displays (such as the Citilab ED1 or the M5Stack family) also support this primitives in a simulated "fat pixel" display.'
+
+	spec ' ' '[display:mbDisplay]' 'display _' 'microbitDisplay' 15237440
+	spec ' ' '[display:mbDisplayOff]' 'clear display'
+	spec ' ' '[display:mbPlot]' 'plot x _ y _' 'num num' 3 3
+	spec ' ' '[display:mbUnplot]' 'unplot x _ y _' 'num num' 3 3
+	spec ' ' 'displayCharacter' 'display character _' 'str' 'A'
+
+to displayCharacter s {
+  s = ('[data:join]' '' s)
+  '[display:mbDrawShape]' ('[display:mbShapeForLetter]' (at 1 s))
+}
+
+
+module Radio Comm
+author MicroBlocks
+version 1 1 
+tags radio communication messaging network 
+description 'Send and receive messages between micro:bit boards via their built-in radio system.'
+
+	spec ' ' '[radio:sendInteger]' 'radio send number _' 'num' 123
+	spec ' ' '[radio:sendString]' 'radio send string _' 'str' 'Hello!'
+	spec ' ' '[radio:sendPair]' 'radio send pair _ = _' 'str num' 'light' 10
+	spec 'r' '[radio:messageReceived]' 'radio message received?'
+	spec 'r' '[radio:receivedInteger]' 'radio last number'
+	spec 'r' '[radio:receivedString]' 'radio last string'
+	spec ' ' '[radio:setGroup]' 'radio set group _ (0-255)' 'num' 0
+	spec ' ' '[radio:setPower]' 'radio set power (0-7) _' 'num' 4
+	spec 'r' '_receivedMessageType' '_radio last message type'
+	spec ' ' '_setChannel' '_radio set channel (0-83) _' 'num' 7
+	spec 'r' '_signalStrength' '_radio last signal strength'
+
+to '_receivedMessageType' {
+  return ('[radio:receivedMessageType]')
+}
+
+to '_setChannel' channel {
+  '[radio:setChannel]' channel
+}
+
+to '_signalStrength' {
+  return ('[radio:signalStrength]')
+}
+
