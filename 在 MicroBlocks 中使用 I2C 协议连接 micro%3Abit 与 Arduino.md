@@ -211,5 +211,5 @@
 
 尽情享受吧!
 -
-- MicroBlocks 端  [i2cToARDUINO.ubp](../assets/i2cToARDUINO_1672722757727_0.ubp)
-  Arduino 端 [microbit_i2cslave_xmit_recv.ino](../assets/microbit_i2cslave_xmit_recv_1672722808607_0.ino) #程序下载
+- MicroBlocks 端  [i2cToARDUINO.ubp](/assets/i2cToARDUINO_1672722757727_0.ubp)
+  Arduino 端 [microbit_i2cslave_xmit_recv.ino](/assets/microbit_i2cslave_xmit_recv_1672722808607_0.ino) #程序下载

@@ -1,3 +1,3 @@
 - 可以加 ((64d9efed-4f30-4463-8e15-20524836e08d))  灯带
-- ![allScripts4639168.png](../assets/allScripts4639168_1692103091872_0.png){:height 759, :width 780}
+- ![allScripts4639168.png](/assets/allScripts4639168_1692103091872_0.png){:height 759, :width 780}
 -
