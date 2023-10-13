@@ -3,7 +3,7 @@
 <!-- - MicroBlocks 中文wiki -->
 - [MicroBlocks 中文wiki](/)
 
-- **参考手册**
+**参考手册**
 - [如何使用MicroBlocks编辑器](用户手册.md)
 - [MicroBlocks 积木编程手册](MicroBlocks%20积木编程手册.md)
 - [硬件驱动库介绍](硬件驱动库.md)
@@ -12,12 +12,12 @@
 - [开发板特殊引脚](主板特殊引脚.md)
 - [示例程序](示例程序.md)
 
-- **如何支持 MicroBlocks**
+**如何支持 MicroBlocks**
 - [如何创建自定义模块库](如何创建一个新的脚本库.md)
 - 翻译 MicroBlocks (TODO)
 - 创建活动指南 (TODO)
  
-- **教程**
+**教程**
 - [使用 UDP 的 WiFi 远程控制](使用%20UDP%20的%20WiFi%20远程控制.md)
 - Play Ringtones (TODO)
 - [传感器与数据项目](传感器与数据项目.md)
