@@ -24,7 +24,7 @@
 - Dancing Robot
 - Electronics
 - MazeRunner Game written with MicroBlocks for Adafruit CLUE
-- HuskyLens
+- [HuskyLens 二哈识图](二哈识图.md)
 - [串行通信是如何工作的?](串行通信是如何工作的.md)
 - App Inventor
 - [SNAP!](SNAP!.md)
