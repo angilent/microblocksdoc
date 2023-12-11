@@ -352,3 +352,6 @@ APP发送的显示消息的时间每秒生成一次。如果您处于环回模�
 https://wiki.microblocks.fun/wifiws/qrcode.png
 	[MIT AI2 Android APP APK](https://wiki.microblocks.fun/wifiudp/udpdemo.apk) - 将此文件旁加载到您的手机上。
 可能需要许可才能安装未知应用程序。
+
+中文视频讲解
+【MicroBlocks 分享会0514 语音控制 VM固件编译 websocket 例程】 https://www.bilibili.com/video/BV18X4y117Mw/?share_source=copy_web&vd_source=fd8a044e6289c1cbf9e05a43445442cd
