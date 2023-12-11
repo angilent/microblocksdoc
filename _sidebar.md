@@ -27,6 +27,9 @@
 
 **教程**
 - [如何创建自定义模块库](如何创建一个新的脚本库.md)
+- [WebSocket 服务器](WebSocket服务器.md)
+- [使用 WebSocket 进行 WiFi 远程控制](使用WebSocket进行WiFi远程控制.md)
+- [Wi-Fi 无线网络](Wi-Fi无线网络.md)	
 - [使用 UDP 的 WiFi 远程控制](使用UDP的WiFi远程控制.md)
 - [播放铃声](播放铃声.md)
 - [传感器与数据项目](传感器与数据项目.md)
