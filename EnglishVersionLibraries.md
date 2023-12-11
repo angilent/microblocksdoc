@@ -1,16 +1,16 @@
 - AI
-  collapsed:: true
+  
 	- AILens
 	- HuskyLens
 - ELECFREAKS
-  collapsed:: true
+  
 	- Cutebot
 	- NeZha
 	- Octopus
 	- WuKong2040
 	- Wukong
 - Graphics and Displays
-  collapsed:: true
+  
 	- 8 Bit Graphics
 	- BMP
 	- HSV Colors
@@ -22,7 +22,7 @@
 	- TFT
 	- Turtle
 - Kits and Boards
-  collapsed:: true
+  
 	- Hummingbird
 	- HyperDuino
 	- Imagina
@@ -33,7 +33,7 @@
 	- TdR STEAM
 	- databot
 - Network
-  collapsed:: true
+  
 	- HTTP client
 	- HTTP server
 	- MQTT
@@ -42,7 +42,7 @@
 	- WebThings
 	- WiFi
 - Other
-  collapsed:: true
+  
 	- System
 		- filePrims
 		- graphicsPrims
@@ -73,7 +73,7 @@
 	- Strings
 	- dec2anyBase
 - Robots
-  collapsed:: true
+  
 	- 3dBot
 	- Finch
 	- LEGO EV3
@@ -83,7 +83,7 @@
 	- RobotBit
 	- Sphero-RVR
 - Sensing
-  collapsed:: true
+  
 	- Air Pressure (LPS22HB)
 	- Barometric Pressure (BMX280)
 	- Button Events
@@ -115,7 +115,7 @@
 	- Touch (microbit)
 	- Touch Screen
 - Sound
-  collapsed:: true
+  
 	- AMRadioTone
 	- DAC MCP4725
 	- MP3 Player (Open Smart)

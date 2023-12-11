@@ -19,9 +19,10 @@
  
 **教程**
 - [使用 UDP 的 WiFi 远程控制](使用UDP的WiFi远程控制.md)
-- Play Ringtones (TODO)
+- [播放铃声](播放铃声.md)
 - [传感器与数据项目](传感器与数据项目.md)
 - Dancing Robot
+- [使用 OctoStudio 远程控制 Micro:bit 麦昆小车](使用OctoStudio远程控制microbit麦昆小车.md)
 - Electronics
 - MazeRunner Game written with MicroBlocks for Adafruit CLUE
 - [HuskyLens 二哈识图](二哈识图.md)
@@ -29,6 +30,7 @@
 - App Inventor
 - [SNAP!](SNAP!.md)
 - [在 MicroBlocks 中使用 I2C 协议连接 micro:bit 与 Arduino](在MicroBlocks中使用I2C协议连接microbit与Arduino.md)
+- [IR Remote 红外遥控](红外遥控库.md)   
 - Run the MicroBlocks VM on Raspberry Pi
 MicroBlocks IDE HTTP Server
 - Older Tutorials

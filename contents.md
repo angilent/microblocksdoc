@@ -1,7 +1,7 @@
 ### [[MicroBlocks 中文维基百科]]
 - ((63b4fd79-2288-4667-a428-cbd29aa15df7))
 - ((63b4fd79-8483-4695-9f1c-160bc57f0d5d))
-  collapsed:: true
+  
 	-
 - ((63b4fd79-6280-4b6f-9996-5ba3df95fa6c)) 使用
 	- ((64d9eecd-540c-4624-b367-621d2d43b49b)) ❤️

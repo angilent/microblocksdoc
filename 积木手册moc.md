@@ -1,5 +1,5 @@
 - {{renderer :tocgen2, [[MicroBlocks 积木编程手册]], auto, 2, h }}
-  collapsed:: true
+  
 	- {{query (property "block/tags")}}
 	  query-table:: true
 	  query-properties:: [:block :block/img :block/tags :block/types :block/alias :block/color]

@@ -9,7 +9,7 @@
 
 [用户手册](用户手册.md)
 
-[MicroBlocks 积木编程手册](MicroBlocks%20积木编程手册.md)
+[MicroBlocks 积木编程手册](MicroBlocks积木编程手册.md)
 
 [硬件驱动库](硬件驱动库.md)
 
@@ -33,13 +33,15 @@
 
 # 教程
 
-[使用 UDP 的 WiFi 远程控制](使用%20UDP%20的%20WiFi%20远程控制.md)
+[使用 UDP 的 WiFi 远程控制](使用UDP的WiFi远程控制.md)
 
-Play Ringtones
+[播放铃声](播放铃声.md)
 
 [传感器与数据项目](传感器与数据项目.md) （Sensing and Data Tutorials）
 
 Dancing Robot
+
+[使用 OctoStudio 远程控制 Micro:bit Maqueen 机器人](使用OctoStudio远程控制microbit麦昆小车.md)
 
 Electronics
 
