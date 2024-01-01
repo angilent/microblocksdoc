@@ -37,6 +37,8 @@
 
 ## 教程
 
+- [未来科技盒相关项目](未来科技盒.md)
+
 - [使用 UDP 的 WiFi 远程控制](使用UDP的WiFi远程控制.md)
 - [播放铃声](播放铃声.md)
 - [传感器与数据项目](传感器与数据项目.md) （Sensing and Data Tutorials）
@@ -52,6 +54,7 @@
 - Run the MicroBlocks VM on Raspberry Pi
 - MicroBlocks IDE HTTP Server
 - Older Tutorials
+- [其他]
 
 ## 硬件套装
 - OKDO

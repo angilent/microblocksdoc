@@ -26,6 +26,7 @@
 - [GP 语法](GP语法.md)
 
 **教程**
+- [未来科技盒相关项目](未来科技盒.md)
 - [如何创建自定义模块库](如何创建一个新的脚本库.md)
 - [WebSocket 服务器](WebSocket服务器.md)
 - [使用 WebSocket 进行 WiFi 远程控制](使用WebSocket进行WiFi远程控制.md)
