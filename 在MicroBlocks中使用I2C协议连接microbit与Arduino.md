@@ -31,7 +31,7 @@
   
   对于我们的项目，我们将需要两套程序：一套用于micro:bit，另一套用于Arduino。让我们来看看这两个程序。
 - ## Micro:bit 代码
-- ![](https://imgs.zhubai.love/6d47b773e006466397b29016d6a1ce63.png){:height 502, :width 567}
+- ![](https://imgs.zhubai.love/6d47b773e006466397b29016d6a1ce63.png)
   ![](https://imgs.zhubai.love/9e2f6ee98fb84ef2904df5aa4dcdf62a.png)
 - Micro:bit代码分为两部分。 按A键代码集使您能够向Arduino发送一个信息。 按钮-按代码集使你能够从Arduino接收一个信息。
   

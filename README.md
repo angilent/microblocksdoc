@@ -2,7 +2,8 @@
 # 主页
 
 欢迎来到 MicroBlocks 中文wiki 页面。
-官方wiki 地址：[https://wiki.microblocks.fun/](https://wiki.microblocks.fun/)
+
+官方英文wiki 地址：[https://wiki.microblocks.fun/](https://wiki.microblocks.fun/)
 
 ## 参考手册
 
