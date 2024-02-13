@@ -53,6 +53,9 @@
 ![firmwareversion](image-100.png)
 
 ![defaultlib](image-101.png)
+![串口读取.png](/assets/串口读取_1672728424316_0.png)
+
+![sayresult](sayresult.png)
 
 
 ![file](image-102.png)
@@ -66,3 +69,19 @@
 ![openfromboard](image-106.png)
 
 ![savefile](image-107.png)
+
+
+![alt text](image-108.png)
+
+
+![alt text](image-109.png)
+![alt text](image-110.png)
+
+![buttonB](image-111.png)
+
+![buttonB](buttonB.png)
+![localvar](localvar.png)
+
+![alt text](buttonA.png)
+
+![alt text](scriptImage13892270.png)
