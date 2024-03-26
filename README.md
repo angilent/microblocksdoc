@@ -54,7 +54,8 @@
 - App Inventor
 - Run the MicroBlocks VM on Raspberry Pi
 - MicroBlocks IDE HTTP Server
-- Older Tutorials
+- Older Tutorials 
+- [社区维护 VM ](VMlist.md)
 - [其他]
 
 ## 硬件套装
