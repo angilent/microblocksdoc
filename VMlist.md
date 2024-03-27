@@ -1,7 +1,7 @@
 ## MicroBlocks 社区维护固件
 
 固件都支持 MicroBlocks 的无线 BLE 编程
-- [M5 Core2](/assets/m5core2_firmware_232.bin ':ignore')
+- [M5 Core2](/assets/m5core2_firmware_232_2.bin ':ignore')
 
     固件功能：
 
