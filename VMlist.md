@@ -9,9 +9,9 @@
     触摸，需要引入 Others - System - Touch Screen Primitive 库
 未完成：
     
-[M5 StickC](/assets/m5stick-firmware-232.bin)
-[M5 StickC Plus](/assets/m5stick-plus-firmware-232.bin)
-[M5 StickC Plus 2](/assets/m5stick-plus2-firmware-232.bin)
+[M5 StickC](/assets/m5stick-firmware-232.bin ':ignore')
+[M5 StickC Plus](/assets/m5stick-plus-firmware-232.bin ':ignore')
+[M5 StickC Plus 2](/assets/m5stick-plus2-firmware-232.bin ':ignore')
 未完成：mic
 
 [M5 Cardputer](/assets/m5-cardputer-firmware-232.bin ':ignore')
@@ -52,13 +52,13 @@
 未完成：
     陀螺仪
 
-[Matrix:bit](/assets/matrixbit-firmware-232.bin)
+[Matrix:bit](/assets/matrixbit-firmware-232.bin ':ignore')
 
 [乾坤板](/assets/qiankun-firmware-232.bin)
 
-[TTGO display](/assets/ttgo-display-firmware-232.bin)
+[TTGO display](/assets/ttgo-display-firmware-232.bin ':ignore')
 
-[freenoveCamera](/assets/freenoveCamera-firmware-232.bin)
+[freenoveCamera](/assets/freenoveCamera-firmware-232.bin ':ignore')
 
 
 
