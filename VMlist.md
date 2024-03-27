@@ -56,6 +56,10 @@
 
 [乾坤板](/assets/qiankun-firmware-232.bin)
 
+[TTGO display](/assets/ttgo-display-firmware-232.bin)
+
+[freenoveCamera](/assets/freenoveCamera-firmware-232.bin)
+
 
 
 
