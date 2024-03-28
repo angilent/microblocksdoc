@@ -20,6 +20,7 @@
 * [主板特殊引脚](主板特殊引脚.md)
 * [ESP32 说明](ESP32说明.md)
 * [ESP8266 说明](ESP8266%20说明.md)
+- [社区维护VM固件 ](VMlist.md)
 
 
 ## 技术说明
@@ -55,7 +56,6 @@
 - Run the MicroBlocks VM on Raspberry Pi
 - MicroBlocks IDE HTTP Server
 - Older Tutorials 
-- [社区维护 VM ](VMlist.md)
 - [其他]
 
 ## 硬件套装
