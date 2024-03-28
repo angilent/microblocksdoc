@@ -29,6 +29,41 @@
 
     未完成：mic 
 ---     
+
+
+- ## [M5 Atom lite](assets/m5atom-lite-firmware-232.bin ':ignore')
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051e96776688fd97d5e562/m5atom-lite-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/m5atom-lite-firmware-232.bin
+-   固件功能：
+
+    按键
+    按键彩灯
+    外接1306 OLED
+---
+- ## [Matrix:bit](assets/matrixbit-firmware-232.bin ':ignore')
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051ef6776688fd97d5e56a/matrixbit-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/matrixbit-firmware-232.bin
+
+- ## [乾坤板](assets/qiankun-firmware-232.bin)
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f11776688fd97d5e56e/qiankun-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/qiankun-firmware-232.bin
+
+- ## [TTGO display](assets/ttgo-display-firmware-232.bin ':ignore')
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f3d776688fd97d5e572/ttgo-display-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/ttgo-display-firmware-232.bin
+
+- ## [freenoveCamera](assets/freenoveCamera-firmware-232.bin ':ignore')
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f53776688fd97d5e576/freenoveCamera-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/freenoveCamera-firmware-232.bin
+
+- ## 以下S3的相关固件,如果你的串口是CDC 模式，则不能通过URL 的方式刷新固件。
+---
+## [基础 S3 带OLED](/assets/esp32-s3-oled-firmware-232.bin ':ignore')
+内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66052d83776688fd97d5e582/esp32-s3-oled-firmware-232.bin
+- git：https://angilent.github.io/microblocksdoc/assets/esp32-s3-oled-firmware-232.bin
+
+---
+
 - ## [M5 Cardputer](assets/m5-cardputer-firmware-232.bin ':ignore')
 内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051c5b7e4d83f9ecfe1d85/m5-cardputer-firmware-232.bin
 - git：https://angilent.github.io/microblocksdoc/assets/m5-cardputer-firmware-232.bin
@@ -60,14 +95,7 @@
         按键彩灯
         外接1306 OLED
 ---
-- ## [M5 Atom lite](assets/m5atom-lite-firmware-232.bin ':ignore')
-内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051e96776688fd97d5e562/m5atom-lite-firmware-232.bin
-- git：https://angilent.github.io/microblocksdoc/assets/m5atom-lite-firmware-232.bin
--   固件功能：
 
-    按键
-    按键彩灯
-    外接1306 OLED
 ---
 - ## [小喵 Future Lite](assets/future-lite-firmware-232.bin ':ignore')
 内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051d3c7e4d83f9ecfe1d8e/future-lite-firmware-232.bin
@@ -83,18 +111,3 @@
 
     陀螺仪
 ---
-- ## [Matrix:bit](assets/matrixbit-firmware-232.bin ':ignore')
-内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051ef6776688fd97d5e56a/matrixbit-firmware-232.bin
-- git：https://angilent.github.io/microblocksdoc/assets/matrixbit-firmware-232.bin
-
-- ## [乾坤板](assets/qiankun-firmware-232.bin)
-内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f11776688fd97d5e56e/qiankun-firmware-232.bin
-- git：https://angilent.github.io/microblocksdoc/assets/qiankun-firmware-232.bin
-
-- ## [TTGO display](assets/ttgo-display-firmware-232.bin ':ignore')
-内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f3d776688fd97d5e572/ttgo-display-firmware-232.bin
-- git：https://angilent.github.io/microblocksdoc/assets/ttgo-display-firmware-232.bin
-
-- ## [freenoveCamera](assets/freenoveCamera-firmware-232.bin ':ignore')
-内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66051f53776688fd97d5e576/freenoveCamera-firmware-232.bin
-- git：https://angilent.github.io/microblocksdoc/assets/freenoveCamera-firmware-232.bin
