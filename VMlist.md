@@ -1,15 +1,14 @@
 ## MicroBlocks 社区维护固件
 
 固件都支持 MicroBlocks 的无线 BLE 编程
-- [M5 Core2](/assets/m5core2_firmware_232_2.bin ':ignore')
-
+- [M5 Core2 v1.0](/assets/m5core2-firmware-232-3.bin ':ignore')
+目前只支持旧版本的 core2 v1.0
     固件功能：
-
         屏幕
-        触摸，
-            需要引入 Others - System - Touch Screen Primitive 库
-
+        触摸，震动
+            需要引入 Libraries/Kits and Boards/M5Core2.ubl
     未完成：
+
 
 ---
 - [M5 StickC](/assets/m5stick-firmware-232.bin ':ignore')
