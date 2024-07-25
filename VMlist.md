@@ -1,9 +1,8 @@
 ## MicroBlocks 社区维护固件
 
 固件都支持 MicroBlocks 的无线 BLE 编程
-## [M5 Core2 v1.0](assets/m5core2-firmware-232-4.bin ':ignore')
-- 内地：https://r.fabrie.cn/files/66051ac9aef4fc480186b819/66058db1776688fd97d5e58e/m5core2-firmware-232-4.bin
-- git：https://angilent.github.io/microblocksdoc/assets/m5core2-firmware-232-4.bin
+## [M5 Core2 v1.0](assets/file/m5core2_firmware_244.bin ':ignore')
+
 
 
 目前只支持旧版本的 core2 v1.0
@@ -28,6 +27,10 @@
 - git：https://angilent.github.io/microblocksdoc/assets/m5stick-plus2-firmware-232.bin
 
     未完成：mic 
+
+  - ## [M5 StickC Plus 2 HAT I2C](assets/m5stick-plus2-hat-firmware-232.bin ':ignore')  
+
+  - git：https://angilent.github.io/microblocksdoc/assets/m5stick-plus2-hat-firmware-232.bin
 ---     
 
 
